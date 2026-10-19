@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Careers | Zomyra Technologies Pvt Ltd</title>
+<meta name="description" content="Zomyra Technologies Pvt Ltd is building its initial team. Explore opportunities in web, software and AI, design, video, social media, content, business and QA. Apply via WhatsApp.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23070B1F'/%3E%3Cpath d='M16 18h32L22 46h26' fill='none' stroke='%2300D9FF' stroke-width='6' stroke-linejoin='round'/%3E%3C/svg%3E">
+<style>
+/* ===== Brand tokens ===== */
+:root{--navy:#070B1F;--violet:#6C3BFF;--cyan:#00D9FF;--white:#F5F7FF;
+--card:#0E1431;--line:rgba(245,247,255,.12);--muted:rgba(245,247,255,.72)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{background:var(--navy);color:var(--white);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;overflow-x:hidden}
+[dir=rtl] body,[dir=rtl] input,[dir=rtl] select,[dir=rtl] textarea,[dir=rtl] button{font-family:"Noto Nastaliq Urdu","Noto Naskh Arabic","Jameel Noori Nastaleeq",Tahoma,sans-serif}
+[dir=rtl] body{line-height:2.1}
+a{color:inherit}
+.wrap{width:min(1080px,100% - 32px);margin-inline:auto}
+section{padding:64px 0}
+h1,h2,h3{line-height:1.25}
+h2{font-size:clamp(1.6rem,5vw,2.2rem);margin-bottom:12px}
+.sub{color:var(--muted);max-width:62ch;margin-bottom:28px}
+:focus-visible{outline:3px solid var(--cyan);outline-offset:2px}
+
+/* ===== Buttons ===== */
+.btn{display:inline-block;border:0;border-radius:12px;padding:13px 22px;font-size:1rem;font-weight:600;text-decoration:none;cursor:pointer;color:var(--white);background:linear-gradient(135deg,var(--violet),#4B2BD6);transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(108,59,255,.4)}
+.btn.alt{background:transparent;border:1.5px solid var(--cyan);color:var(--cyan)}
+.btn.wa{background:#128C4A}
+.btn.sm{padding:10px 16px;font-size:.95rem}
+
+/* ===== Navigation ===== */
+header{position:sticky;top:0;z-index:50;background:rgba(7,11,31,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:64px;gap:10px}
+.logo{font-weight:800;letter-spacing:.14em;text-decoration:none;font-size:1.15rem;direction:ltr}
+.logo b{color:var(--cyan)}
+.links{display:none;position:absolute;top:64px;inset-inline:0;background:var(--navy);flex-direction:column;padding:12px 16px 20px;border-bottom:1px solid var(--line)}
+.links.open{display:flex}
+.links a{text-decoration:none;padding:12px 4px;border-bottom:1px solid var(--line)}
+.tools{display:flex;gap:8px;align-items:center}
+#lang,#burger{background:transparent;color:var(--white);border:1.5px solid var(--line);border-radius:10px;padding:8px 12px;cursor:pointer;font-size:.95rem}
+#burger{font-size:1.2rem;line-height:1}
+@media(min-width:820px){#burger{display:none}.links{display:flex;position:static;flex-direction:row;gap:22px;padding:0;border:0;background:none}.links a{border:0;padding:4px 0;color:var(--muted)}.links a:hover{color:var(--cyan)}}
+
+/* ===== Hero ===== */
+.hero{padding:72px 0 56px;background:radial-gradient(600px 300px at 85% 0,rgba(108,59,255,.28),transparent),radial-gradient(500px 260px at 0 100%,rgba(0,217,255,.14),transparent)}
+.hero h1{font-size:clamp(2rem,8vw,3.6rem);max-width:15ch;margin-bottom:16px;animation:rise .8s ease both}
+.hero p.lead{color:var(--muted);max-width:56ch;margin-bottom:24px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:28px}
+.paths{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:22px}
+.chip{border:1px solid var(--line);border-radius:999px;padding:8px 16px;background:rgba(108,59,255,.14)}
+.tag{color:var(--cyan);font-weight:600}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* ===== Cards ===== */
+.grid{display:grid;gap:16px;grid-template-columns:1fr}
+@media(min-width:640px){.grid{grid-template-columns:1fr 1fr}}
+@media(min-width:960px){.grid{grid-template-columns:repeat(3,1fr)}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:8px}
+.card h3{font-size:1.1rem}
+.card p{color:var(--muted);font-size:.95rem}
+.card .sk{color:var(--white)}
+.card .sk b{color:var(--cyan)}
+.card small{color:var(--cyan)}
+.card .btn{margin-top:auto;align-self:flex-start}
+
+/* ===== Form ===== */
+form{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;display:grid;gap:16px}
+@media(min-width:720px){form{grid-template-columns:1fr 1fr;padding:28px}.full{grid-column:1/-1}}
+label{display:block;font-weight:600;margin-bottom:6px}
+input,select,textarea{width:100%;background:var(--navy);color:var(--white);border:1.5px solid var(--line);border-radius:10px;padding:12px;font-size:1rem}
+textarea{min-height:110px;resize:vertical}
+[aria-invalid=true]{border-color:#ff6b81}
+.err{display:block;color:#ff8da0;font-size:.9rem;min-height:0}
+#sum{color:#ff8da0;font-weight:600}
+.note{background:rgba(0,217,255,.1);border:1px solid var(--cyan);border-radius:12px;padding:12px 14px}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+.ltr{direction:ltr;unicode-bidi:embed;display:inline-block}
+
+/* ===== Transparency / contact / footer ===== */
+.trans{border-inline-start:4px solid var(--violet);background:var(--card);padding:20px;border-radius:12px}
+footer{border-top:1px solid var(--line);padding:32px 0;text-align:center;color:var(--muted)}
+footer strong{color:var(--white);letter-spacing:.08em}
+</style>
+</head>
+<body>
+
+<!-- ===== Navigation bar ===== -->
+<header>
+ <div class="wrap bar">
+  <a class="logo" href="#home">ZOM<b>Y</b>RA</a>
+  <nav id="menu" class="links" aria-label="Main">
+   <a href="#home" data-i="n1">Home</a>
+   <a href="#opportunities" data-i="n2">Opportunities</a>
+   <a href="#about" data-i="n3">About</a>
+   <a href="#apply" data-i="n4">Application</a>
+   <a href="#contact" data-i="n5">Contact</a>
+  </nav>
+  <div class="tools">
+   <button id="lang" type="button" aria-label="Language">اردو</button>
+   <button id="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="menu">☰</button>
+  </div>
+ </div>
+</header>
+
+<main>
+<!-- ===== Hero ===== -->
+<section class="hero" id="home">
+ <div class="wrap">
+  <h1 data-i="h1">Build Your Future with Zomyra Technologies</h1>
+  <p class="lead" data-i="h2">Explore opportunities to learn, collaborate, develop practical skills, and contribute to technology and digital projects.</p>
+  <div class="cta">
+   <a class="btn" href="#opportunities" data-i="b1">Explore Opportunities</a>
+   <a class="btn alt" href="#apply" data-i="b2">Apply Now</a>
+  </div>
+  <div class="paths">
+   <span class="chip" data-i="p1">Freshers &amp; Beginners</span>
+   <span class="chip" data-i="p2">Experienced Candidates</span>
+  </div>
+  <p class="tag" data-i="tag">Building Technology Beyond Tomorrow.</p>
+ </div>
+</section>
+
+<!-- ===== About ===== -->
+<section id="about">
+ <div class="wrap">
+  <h2 data-i="at">About Zomyra Technologies</h2>
+  <p class="sub" data-i="ap">Zomyra Technologies aims to create opportunities for motivated people, including beginners who have talent and a willingness to learn but lack experience or access to opportunities. Not every applicant will be selected, and applying does not guarantee employment, payment or income.</p>
+ </div>
+</section>
+
+<!-- ===== Opportunities (cards are generated by script.js section below) ===== -->
+<section id="opportunities">
+ <div class="wrap">
+  <h2 data-i="ot">Opportunities</h2>
+  <p class="sub" data-i="os">Every role is open to both freshers and experienced candidates. Selection depends on suitability, skills, availability and the evaluation process.</p>
+  <div class="grid" id="cards"></div>
+ </div>
+</section>
+
+<!-- ===== Application form ===== -->
+<section id="apply">
+ <div class="wrap">
+  <h2 data-i="ft">Application Form</h2>
+  <p class="sub" data-i="fs">Fill in the form. It prepares a WhatsApp message for you to review and send.</p>
+  <form id="f" novalidate>
+   <div><label for="name" data-i="l1">Full name</label>
+    <input id="name" autocomplete="name" aria-describedby="e-name"><span class="err" id="e-name" role="alert"></span></div>
+   <div><label for="phone" data-i="l2">WhatsApp / contact number</label>
+    <input id="phone" type="tel" inputmode="tel" placeholder="+92 3XX XXXXXXX" dir="ltr" autocomplete="tel" aria-describedby="e-phone"><span class="err" id="e-phone" role="alert"></span></div>
+   <div><label for="city" data-i="l3">City and country</label>
+    <input id="city" autocomplete="address-level2" placeholder="Lahore, Pakistan" aria-describedby="e-city"><span class="err" id="e-city" role="alert"></span></div>
+   <div><label for="email" data-i="l4">Email address (optional)</label>
+    <input id="email" type="email" inputmode="email" dir="ltr" autocomplete="email" aria-describedby="e-email"><span class="err" id="e-email" role="alert"></span></div>
+   <div><label for="type" data-i="l5">Candidate type</label>
+    <select id="type" aria-describedby="e-type"><option value="" data-i="sel">Select</option>
+     <option value="Fresher / Beginner" data-i="t1">Fresher / Beginner</option>
+     <option value="Experienced" data-i="t2">Experienced</option></select><span class="err" id="e-type" role="alert"></span></div>
+   <div><label for="role" data-i="l6">Primary role</label>
+    <select id="role" aria-describedby="e-role"></select><span class="err" id="e-role" role="alert"></span></div>
+   <div><label for="role2" data-i="l7">Secondary role (optional)</label>
+    <select id="role2"></select></div>
+   <div><label for="avail" data-i="l8">Weekly availability</label>
+    <select id="avail" aria-describedby="e-avail"><option value="" data-i="sel">Select</option>
+     <option value="Less than 10 hours/week" data-i="a1">Less than 10 hours per week</option>
+     <option value="10-20 hours/week" data-i="a2">10–20 hours per week</option>
+     <option value="20-30 hours/week" data-i="a3">20–30 hours per week</option>
+     <option value="30+ hours/week" data-i="a4">30+ hours per week</option></select><span class="err" id="e-avail" role="alert"></span></div>
+   <div class="full"><label for="skills" data-i="l9">Skills and relevant experience</label>
+    <textarea id="skills" aria-describedby="e-skills"></textarea><span class="err" id="e-skills" role="alert"></span></div>
+   <div><label for="link" data-i="l10">Portfolio or sample-work link (optional)</label>
+    <input id="link" type="url" inputmode="url" dir="ltr" placeholder="https://" aria-describedby="e-link"><span class="err" id="e-link" role="alert"></span></div>
+   <div><label for="device" data-i="l11">Available device</label>
+    <select id="device" aria-describedby="e-device"><option value="" data-i="sel">Select</option>
+     <option value="Android phone" data-i="d1">Android phone</option>
+     <option value="Computer / laptop" data-i="d2">Computer / laptop</option>
+     <option value="Both phone and computer" data-i="d3">Both</option></select><span class="err" id="e-device" role="alert"></span></div>
+   <div class="full"><label for="why" data-i="l12">Short motivation statement (optional)</label>
+    <textarea id="why"></textarea></div>
+   <p class="full" data-i="priv" style="color:var(--muted)">Please do not share CNIC numbers, passwords or bank details.</p>
+   <p class="full" id="sum" role="alert"></p>
+   <div class="full actions">
+    <button class="btn wa" type="button" id="wa" data-i="gw">Prepare WhatsApp Application</button>
+    <button class="btn alt" type="button" id="mail" data-i="gm">Send by Email Instead</button>
+   </div>
+   <p class="full note" data-i="wn">Your application is not submitted until you press Send in WhatsApp.</p>
+   <p class="full" id="ok" role="status" style="color:var(--cyan)"></p>
+  </form>
+ </div>
+</section>
+
+<!-- ===== Recruitment transparency ===== -->
+<section>
+ <div class="wrap">
+  <h2 data-i="tt">Recruitment Transparency</h2>
+  <p class="trans" data-i="tp">Zomyra Technologies is currently building its initial team. A fixed salary or stipend is not guaranteed at the application stage. Any voluntary learning or practice activity must be clearly explained and mutually agreed upon. Commercial assignments must have written agreement on the scope, deadline, and compensation/payment terms before work begins. No application fee is charged. Applying does not guarantee selection, employment, or earnings.</p>
+ </div>
+</section>
+
+<!-- ===== Contact ===== -->
+<section id="contact">
+ <div class="wrap">
+  <h2 data-i="ct">Contact</h2>
+  <p class="sub" data-i="cs">Questions? Reach us on WhatsApp or email.</p>
+  <p><span data-i="cp">Phone / WhatsApp:</span> <span class="ltr">+92 370-7093144</span></p>
+  <p style="margin-bottom:20px"><span data-i="ce">Email:</span> <span class="ltr">zomyratechnologiesofficial1@gmail.com</span></p>
+  <div class="actions">
+   <a class="btn wa" href="https://wa.me/923707093144" target="_blank" rel="noopener" data-i="cw">Message on WhatsApp</a>
+   <a class="btn alt" href="mailto:zomyratechnologiesofficial1@gmail.com" data-i="cm">Send an Email</a>
+  </div>
+ </div>
+</section>
+</main>
+
+<!-- ===== Footer ===== -->
+<footer>
+ <div class="wrap">
+  <p><strong>ZOMYRA TECHNOLOGIES PVT LTD</strong></p>
+  <p data-i="tag">Building Technology Beyond Tomorrow.</p>
+  <p><span data-i="fb">Founded by</span> Mudassar Ali Kamboh</p>
+  <p>© <span id="yr"></span> ZOMYRA TECHNOLOGIES PVT LTD</p>
+ </div>
+</footer>
+
+<script>
+/* ===== 1. Roles: [English title, Urdu title, English description, Urdu description, English skills, Urdu skills] ===== */
+const R=[
+["Web Development","ویب ڈیولپمنٹ","Build and improve websites and web apps.","ویب سائٹس اور ویب ایپس بنانا اور بہتر کرنا۔","HTML, CSS, JavaScript, responsive design basics","HTML، CSS، JavaScript، ریسپانسیو ڈیزائن کی بنیادی سمجھ"],
+["Software Development & AI","سافٹ ویئر ڈیولپمنٹ اور AI","Create software tools and work on AI-powered solutions.","سافٹ ویئر ٹولز بنانا اور AI سے چلنے والے حل پر کام کرنا۔","Python or JavaScript, problem solving, basic AI tools","Python یا JavaScript، مسئلہ حل کرنا، AI ٹولز کی بنیادی سمجھ"],
+["Graphic Design","گرافک ڈیزائن","Design visuals for branding, social media and marketing.","برانڈنگ، سوشل میڈیا اور مارکیٹنگ کے لیے ڈیزائن بنانا۔","Canva, Photoshop or Figma, colour and typography sense","Canva، Photoshop یا Figma، رنگوں اور ٹائپوگرافی کی سمجھ"],
+["Video Editing","ویڈیو ایڈیٹنگ","Edit short videos, reels and promotional content.","شارٹ ویڈیوز، ریلز اور پروموشنل مواد ایڈٹ کرنا۔","CapCut, Premiere Pro or similar, cutting, audio, subtitles","CapCut، Premiere Pro یا اس جیسے ٹولز، کٹنگ، آڈیو، سب ٹائٹلز"],
+["Social Media Management","سوشل میڈیا مینجمنٹ","Plan and schedule posts and engage with online communities.","پوسٹس کی منصوبہ بندی، شیڈولنگ اور آن لائن کمیونٹی سے رابطہ۔","Content planning, caption writing, basic analytics","مواد کی منصوبہ بندی، کیپشن لکھنا، بنیادی تجزیہ"],
+["Content Writing & Urdu Scripts","کنٹینٹ رائٹنگ اور اردو اسکرپٹس","Write website copy, articles and Urdu scripts for videos.","ویب سائٹ کا مواد، مضامین اور ویڈیوز کے لیے اردو اسکرپٹ لکھنا۔","Clear Urdu or English writing, creativity, proofreading","صاف اردو یا انگریزی تحریر، تخلیقی سوچ، پروف ریڈنگ"],
+["Business Development & Communication","بزنس ڈیولپمنٹ اور کمیونیکیشن","Reach out to potential partners and handle professional communication.","ممکنہ شراکت داروں سے رابطہ اور پیشہ ورانہ مواصلات سنبھالنا۔","Good communication, research, professional messaging","اچھی گفتگو، تحقیق، پیشہ ورانہ پیغام رسانی"],
+["Testing & Quality Assurance","ٹیسٹنگ اور کوالٹی اشورنس","Find and report issues in websites and apps.","ویب سائٹس اور ایپس میں خامیاں تلاش کر کے رپورٹ کرنا۔","Attention to detail, test cases, clear bug reports","باریک بینی، ٹیسٹ کیسز، واضح بگ رپورٹ"]
+];
+
+/* ===== 2. Translations (English and Urdu) ===== */
+const T={en:{
+n1:"Home",n2:"Opportunities",n3:"About",n4:"Application",n5:"Contact",
+h1:"Build Your Future with Zomyra Technologies",
+h2:"Explore opportunities to learn, collaborate, develop practical skills, and contribute to technology and digital projects.",
+b1:"Explore Opportunities",b2:"Apply Now",p1:"Freshers & Beginners",p2:"Experienced Candidates",
+tag:"Building Technology Beyond Tomorrow.",
+at:"About Zomyra Technologies",
+ap:"Zomyra Technologies aims to create opportunities for motivated people, including beginners who have talent and a willingness to learn but lack experience or access to opportunities. Not every applicant will be selected, and applying does not guarantee employment, payment or income.",
+ot:"Opportunities",os:"Every role is open to both freshers and experienced candidates. Selection depends on suitability, skills, availability and the evaluation process.",
+both:"Open to freshers and experienced candidates",skl:"Basic skills:",ar:"Apply for This Role",
+ft:"Application Form",fs:"Fill in the form. It prepares a WhatsApp message for you to review and send.",
+l1:"Full name",l2:"WhatsApp / contact number",l3:"City and country",l4:"Email address (optional)",l5:"Candidate type",l6:"Primary role",l7:"Secondary role (optional)",l8:"Weekly availability",l9:"Skills and relevant experience",l10:"Portfolio or sample-work link (optional)",l11:"Available device",l12:"Short motivation statement (optional)",
+sel:"Select",none:"None",t1:"Fresher / Beginner",t2:"Experienced",
+a1:"Less than 10 hours per week",a2:"10–20 hours per week",a3:"20–30 hours per week",a4:"30+ hours per week",
+d1:"Android phone",d2:"Computer / laptop",d3:"Both",
+priv:"Please do not share CNIC numbers, passwords or bank details.",
+gw:"Prepare WhatsApp Application",gm:"Send by Email Instead",
+wn:"Your application is not submitted until you press Send in WhatsApp.",
+req:"This field is required.",bp:"Enter a valid number, for example +92 3XX XXXXXXX.",be:"Enter a valid email address.",bu:"The link must start with http:// or https://",
+fix:"Some required fields are missing or invalid. Please fix the highlighted fields.",
+ok:"WhatsApp is opening with your message. Review it and press Send. Your application is not submitted until you do.",
+okm:"Your email app is opening. Press Send there to submit your application.",
+tt:"Recruitment Transparency",
+tp:"Zomyra Technologies is currently building its initial team. A fixed salary or stipend is not guaranteed at the application stage. Any voluntary learning or practice activity must be clearly explained and mutually agreed upon. Commercial assignments must have written agreement on the scope, deadline, and compensation/payment terms before work begins. No application fee is charged. Applying does not guarantee selection, employment, or earnings.",
+ct:"Contact",cs:"Questions? Reach us on WhatsApp or email.",cp:"Phone / WhatsApp:",ce:"Email:",cw:"Message on WhatsApp",cm:"Send an Email",fb:"Founded by"
+},ur:{
+n1:"ہوم",n2:"مواقع",n3:"تعارف",n4:"درخواست",n5:"رابطہ",
+h1:"Zomyra Technologies کے ساتھ اپنا مستقبل بنائیں",
+h2:"سیکھنے، مل کر کام کرنے، عملی مہارتیں بڑھانے اور ٹیکنالوجی و ڈیجیٹل منصوبوں میں اپنا حصہ ڈالنے کے مواقع دریافت کریں۔",
+b1:"مواقع دیکھیں",b2:"ابھی درخواست دیں",p1:"نئے اور مبتدی امیدوار",p2:"تجربہ کار امیدوار",
+tag:"آنے والے کل سے آگے ٹیکنالوجی کی تعمیر۔",
+at:"Zomyra Technologies کے بارے میں",
+ap:"Zomyra Technologies پرعزم لوگوں کے لیے مواقع پیدا کرنا چاہتی ہے، بشمول ان مبتدی افراد کے جن میں صلاحیت اور سیکھنے کا شوق تو ہے مگر تجربہ یا مواقع تک رسائی نہیں۔ ہر درخواست دہندہ کا انتخاب نہیں ہوگا، اور درخواست دینے سے ملازمت، ادائیگی یا آمدن کی ضمانت نہیں ملتی۔",
+ot:"مواقع",os:"ہر کردار نئے اور تجربہ کار دونوں امیدواروں کے لیے کھلا ہے۔ انتخاب موزونیت، مہارت، دستیابی اور جانچ کے عمل پر منحصر ہے۔",
+both:"نئے اور تجربہ کار دونوں کے لیے",skl:"بنیادی مہارتیں:",ar:"اس کردار کے لیے درخواست دیں",
+ft:"درخواست فارم",fs:"فارم بھریں۔ یہ آپ کے لیے واٹس ایپ پیغام تیار کرے گا جسے دیکھ کر آپ بھیج سکتے ہیں۔",
+l1:"پورا نام",l2:"واٹس ایپ / رابطہ نمبر",l3:"شہر اور ملک",l4:"ای میل ایڈریس (اختیاری)",l5:"امیدوار کی قسم",l6:"بنیادی کردار",l7:"ثانوی کردار (اختیاری)",l8:"ہفتہ وار دستیابی",l9:"مہارتیں اور متعلقہ تجربہ",l10:"پورٹ فولیو یا نمونۂ کام کا لنک (اختیاری)",l11:"دستیاب ڈیوائس",l12:"مختصر وجہ، آپ کیوں شامل ہونا چاہتے ہیں (اختیاری)",
+sel:"منتخب کریں",none:"کوئی نہیں",t1:"نیا / مبتدی",t2:"تجربہ کار",
+a1:"ہفتے میں 10 گھنٹے سے کم",a2:"ہفتے میں 10 سے 20 گھنٹے",a3:"ہفتے میں 20 سے 30 گھنٹے",a4:"ہفتے میں 30 گھنٹے سے زیادہ",
+d1:"اینڈرائیڈ فون",d2:"کمپیوٹر / لیپ ٹاپ",d3:"دونوں",
+priv:"براہِ کرم شناختی کارڈ نمبر، پاس ورڈ یا بینک کی تفصیلات نہ بھیجیں۔",
+gw:"واٹس ایپ درخواست تیار کریں",gm:"اس کے بجائے ای میل بھیجیں",
+wn:"جب تک آپ واٹس ایپ میں Send نہیں دبائیں گے، آپ کی درخواست جمع نہیں ہوگی۔",
+req:"یہ خانہ پُر کرنا ضروری ہے۔",bp:"درست نمبر درج کریں، مثلاً +92 3XX XXXXXXX۔",be:"درست ای میل ایڈریس درج کریں۔",bu:"لنک http:// یا https:// سے شروع ہونا چاہیے۔",
+fix:"کچھ ضروری خانے خالی یا غلط ہیں۔ براہِ کرم نمایاں خانے درست کریں۔",
+ok:"آپ کے پیغام کے ساتھ واٹس ایپ کھل رہا ہے۔ اسے دیکھ کر Send دبائیں۔ جب تک آپ ایسا نہیں کریں گے، درخواست جمع نہیں ہوگی۔",
+okm:"آپ کی ای میل ایپ کھل رہی ہے۔ درخواست جمع کرنے کے لیے وہاں Send دبائیں۔",
+tt:"بھرتی میں شفافیت",
+tp:"Zomyra Technologies اس وقت اپنی ابتدائی ٹیم بنا رہی ہے۔ درخواست کے مرحلے پر مقررہ تنخواہ یا وظیفے کی ضمانت نہیں۔ کوئی بھی رضاکارانہ سیکھنے یا مشق کی سرگرمی واضح طور پر بیان کی جائے گی اور باہمی رضامندی سے طے ہوگی۔ کمرشل اسائنمنٹس میں کام شروع ہونے سے پہلے دائرۂ کار، ڈیڈ لائن اور معاوضے یا ادائیگی کی شرائط تحریری طور پر طے ہونا لازم ہیں۔ کوئی درخواست فیس نہیں لی جاتی۔ درخواست دینے سے انتخاب، ملازمت یا آمدن کی ضمانت نہیں ملتی۔",
+ct:"رابطہ",cs:"کوئی سوال ہو تو واٹس ایپ یا ای میل پر رابطہ کریں۔",cp:"فون / واٹس ایپ:",ce:"ای میل:",cw:"واٹس ایپ پر پیغام بھیجیں",cm:"ای میل بھیجیں",fb:"بانی:"
+}};
+
+/* ===== 3. Helpers and state ===== */
+const $=id=>document.getElementById(id);
+let lang="en",errs={},lastOk="";
+
+/* ===== 4. Build role cards and role dropdowns once ===== */
+R.forEach((r,i)=>{
+  const c=document.createElement("article");c.className="card";c.dataset.r=i;
+  c.innerHTML='<h3></h3><p class="d"></p><p class="sk"><b></b> <span></span></p><small></small><button type="button" class="btn sm"></button>';
+  c.querySelector("button").onclick=()=>applyFor(i);
+  $("cards").appendChild(c);
+  ["role","role2"].forEach(id=>{const o=document.createElement("option");o.value=r[0];o.dataset.r=i;$(id).appendChild(o)});
+});
+["role","role2"].forEach((id,k)=>{const o=document.createElement("option");o.value="";o.dataset.i=k?"none":"sel";$(id).prepend(o)});
+
+/* ===== 5. Language switch (updates text only, never clears form values) ===== */
+function setLang(l){
+  lang=l;const t=T[l],u=l==="ur",ix=u?1:0;
+  document.documentElement.lang=u?"ur":"en";document.documentElement.dir=u?"rtl":"ltr";
+  document.querySelectorAll("[data-i]").forEach(e=>e.textContent=t[e.dataset.i]);
+  document.querySelectorAll(".card").forEach(c=>{const r=R[c.dataset.r];
+    c.querySelector("h3").textContent=r[ix];c.querySelector(".d").textContent=r[2+ix];
+    c.querySelector(".sk b").textContent=t.skl;c.querySelector(".sk span").textContent=r[4+ix];
+    c.querySelector("small").textContent=t.both;c.querySelector("button").textContent=t.ar});
+  document.querySelectorAll("option[data-r]").forEach(o=>o.textContent=R[o.dataset.r][ix]);
+  $("lang").textContent=u?"English":"اردو";
+  showErrs();$("ok").textContent=lastOk?t[lastOk]:"";
+}
+$("lang").onclick=()=>setLang(lang==="en"?"ur":"en");
+
+/* ===== 6. Mobile menu ===== */
+$("burger").onclick=()=>{const o=$("menu").classList.toggle("open");$("burger").setAttribute("aria-expanded",o)};
+document.querySelectorAll("#menu a").forEach(a=>a.onclick=()=>{$("menu").classList.remove("open");$("burger").setAttribute("aria-expanded","false")});
+
+/* ===== 7. "Apply for This Role" button: pre-select role, scroll to form ===== */
+function applyFor(i){$("role").value=R[i][0];showErrs();$("apply").scrollIntoView({behavior:"smooth"});setTimeout(()=>$("type").focus({preventScroll:true}),600)}
+
+/* ===== 8. Validation ===== */
+const v=id=>$(id).value.trim();
+function validate(){
+  errs={};
+  ["name","phone","city","type","role","skills","avail","device"].forEach(id=>{if(!v(id))errs[id]="req"});
+  if(v("phone")&&!errs.phone&&(!/^\+?[\d\s\-()]{7,20}$/.test(v("phone"))||v("phone").replace(/\D/g,"").length<10))errs.phone="bp";
+  if(v("email")&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v("email")))errs.email="be";
+  if(v("link")&&!/^https?:\/\/\S+\.\S+/i.test(v("link")))errs.link="bu";
+  showErrs();
+  const first=Object.keys(errs)[0];
+  if(first)$(first).focus();
+  return !first;
+}
+function showErrs(){
+  ["name","phone","city","email","type","role","avail","skills","link","device"].forEach(id=>{
+    const k=errs[id];$("e-"+id).textContent=k?T[lang][k]:"";
+    k?$(id).setAttribute("aria-invalid","true"):$(id).removeAttribute("aria-invalid")});
+  $("sum").textContent=Object.keys(errs).length?T[lang].fix:"";
+}
+
+/* ===== 9. Build the application message (always in English for the recruiter) ===== */
+function buildMsg(){
+  const L=[["Full name",v("name")],["WhatsApp/contact",v("phone")],["City & country",v("city")],["Email",v("email")],
+  ["Candidate type",v("type")],["Primary role",v("role")],["Secondary role",v("role2")],["Skills & experience",v("skills")],
+  ["Portfolio/sample link",v("link")],["Weekly availability",v("avail")],["Available device",v("device")],["Motivation",v("why")]];
+  return "*Job Application - Zomyra Technologies Pvt Ltd*\n\n"+L.filter(x=>x[1]).map(x=>x[0]+": "+x[1]).join("\n")+"\n\nI understand that sending this message does not guarantee selection, employment or earnings.";
+}
+
+/* ===== 10. WhatsApp and email submission (nothing is sent automatically) ===== */
+$("wa").onclick=()=>{
+  if(!validate())return;
+  const url="https://wa.me/923707093144?text="+encodeURIComponent(buildMsg());
+  lastOk="ok";$("ok").textContent=T[lang].ok;
+  if(!window.open(url,"_blank","noopener"))location.href=url;
+};
+$("mail").onclick=()=>{
+  if(!validate())return;
+  lastOk="okm";$("ok").textContent=T[lang].okm;
+  location.href="mailto:zomyratechnologiesofficial1@gmail.com?subject="+encodeURIComponent("Job Application - "+v("name")+" - "+v("role"))+"&body="+encodeURIComponent(buildMsg());
+};
+$("f").addEventListener("submit",e=>e.preventDefault());
+
+/* ===== 11. Start ===== */
+$("yr").textContent=new Date().getFullYear();
+setLang("en");
+</script>
+</body>
+</html>
